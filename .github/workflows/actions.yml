@@ -1,0 +1,27 @@
+name: run main.py
+
+on:
+  shedule:
+    - cron: '0 */2 * * *' # every 2 hours
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      
+      - name: Checkout
+        uses: actions/checkout@v2 # checkout the repo
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install twilio pandas-datareader
+
+      - name: Run main.py
+        run: |
+          python main.py
