@@ -3,10 +3,10 @@ import time
 from twilio.rest import Client
 
 def send_sms(message):
-    account_sid = "ACcf171db624b50b3aa5c0a81bd21338a2"
-    auth_token = "28108efab2a7c5ae54057d01521ee3b1"
-    sending = '+12283386202'
-    reciving = '+923217727595'
+    account_sid = "Your ID From Twilio"
+    auth_token = "Auth Token From Twilio"
+    sending = 'Twilio Number'
+    reciving = 'Your Recinving Number' #Add your information
     client = Client(account_sid, auth_token)
     message = client.messages.create(
         body=message,
@@ -19,10 +19,10 @@ def get_stock_data(stock):
     return data
 
 def main():
-    stocks = ["AAPL", "JPM", "GOOGL", "SBUX"]    
+    stocks = ["AAPL", "JPM", "GOOGL", "SBUX"]    #You can change stock
     for j in range(0,4):
         data = get_stock_data(stocks[j])
-        send_sms("\n\nStock price of \n\n{} is {}\n\nSent by: Uman Sheikh".format(stocks[j], data))
+        send_sms("\n\nStock price of \n\n{} is {}\n\nSent by: S World Codes".format(stocks[j], data))
         
             
         
