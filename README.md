@@ -21,13 +21,13 @@ This script fetches the latest stock prices from Yahoo Finance and sends the inf
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/UmanSheikh/Stock-Alert.git
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-cd your-repo-name
+cd Stock-Alert
 ```
 
 3. Install the required Python packages:
